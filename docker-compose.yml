@@ -1,17 +1,5 @@
 version: "3.4"
 services:
-  server:
-    build:
-      context: ./server
-      target: development-build-stage
-      dockerfile: Dockerfile
-    container_name: server
-    ports:
-      - 5000:5000
-    env_file: common.env
-    volumes:
-      - ./server:/app
-      - /app/node_modules
   client:
     build:
       context: ./client
@@ -24,7 +12,8 @@ services:
     command: npm start
   redis:
     image: redis:6.2-alpine
-    restart: always
+    ports:
+      - 7000:7000
     command: ["redis-server", "--bind", "redis", "--port", "7000"]
 volumes:
   data:

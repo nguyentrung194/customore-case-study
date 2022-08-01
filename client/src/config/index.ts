@@ -1,9 +1,9 @@
 const local = {
-  api: "http://localhost:5000",
+  api: "http://localhost:5000/",
 };
 
 const staging = {
-  api: "http://localhost:5000",
+  api: "http://localhost:5000/",
 };
 
 let envConfig = local;

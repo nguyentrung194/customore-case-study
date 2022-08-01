@@ -5,7 +5,7 @@ import puppeteer from 'puppeteer';
 import cheerio from 'cheerio';
 import * as redis from 'redis';
 const client = redis.createClient({
-  url: 'redis://redis:7000',
+  url: 'redis://localhost:7000',
 });
 
 client.on('error', function (error) {
