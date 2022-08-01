@@ -3,5 +3,4 @@
 
 ---
 #### In terminal: 
-  > cd customore-case-study 
-  > docker-compose up
+  > cd customore-case-study && docker-compose up
